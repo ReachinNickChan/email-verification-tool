@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification Tool</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        h1 { text-align: center; }
+        form { display: flex; flex-direction: column; align-items: center; }
+        input[type="file"] { margin-bottom: 20px; }
+        input[type="submit"] { padding: 10px 20px; cursor: pointer; }
+        .instructions { margin-top: 30px; font-size: 0.9em; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>Email Verification Tool</h1>
+    <form action="/verify" method="post" enctype="multipart/form-data">
+        <p>Upload a CSV file with a column named "Email".</p>
+        <input type="file" name="email_file" accept=".csv" required>
+        <input type="submit" value="Verify Emails">
+    </form>
+    <div class="instructions">
+        <p><b>How it works:</b></p>
+        <ol>
+            <li>Prepare a CSV file with one column titled <b>Email</b>.</li>
+            <li>Click "Choose File" and select your CSV.</li>
+            <li>Click "Verify Emails". Your browser will automatically download a results file.</li>
+        </ol>
+    </div>
+</body>
+</html>

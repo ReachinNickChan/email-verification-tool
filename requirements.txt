@@ -1,0 +1,4 @@
+dnspython
+Flask
+gunicorn
+werkzeug
